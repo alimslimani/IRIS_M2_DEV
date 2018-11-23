@@ -1,0 +1,30 @@
+coureur (codeEquipe,codePays,nomCoureur,prenomCoureur,numCoureur)
+equipe (codeEquipe,dirSportif,nomEquipe)
+etape (dateEtape,nbKm,numEtap,villeArr,villeDep)
+pays (codePays, nomPays)
+temps (classement,numCoureur,numEtap,tpsRealise)
+
+coureur - equipe ->  codeEquipe
+etape - temps : numEtap
+pays - coureur -> codePays
+temps - coureur -> numEtap
+
+select count(t.classement) from temps t,coureur c where t.numCoureur = c.numCoureur and t.classement= 1
+
+select count(e.nbKM) from etape e,temps twhere e.numEtap=t.numEtap and t.numCoureur = 1;
+
+select p.nomPays from pays p where p.codePays = 
+
+
+
+select p.nomPays ,
+        select count(t.classement),
+        select count(e.nbKM) ,
+
+        from pays p,temps t, etape e
+        where p.codePays = '".$_GET['pays']."' 
+        AND t.numCoureur = ".$_GET['numCoureur']." 
+        and t.classement= 1
+        AND e.numEtape=t.numEtape 
+
+pourcentage de victoire par etape
