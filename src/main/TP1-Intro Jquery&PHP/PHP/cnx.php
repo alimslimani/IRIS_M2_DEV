@@ -1,7 +1,7 @@
 ﻿<?php
 //connexion a la base de données
 // dsn = Data Source Name = driver MYSQL
-$dsn = 'mysql:dbname=tourdefrance;host=localhost';
+$dsn = 'mysql:dbname=tp1info;host=localhost';
 //login
 $login = 'root';
 // Mot de passe

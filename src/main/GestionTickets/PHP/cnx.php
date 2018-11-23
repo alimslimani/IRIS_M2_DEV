@@ -1,18 +1,17 @@
 ﻿<?php
 //connexion a la base de données
 // dsn = Data Source Name = driver MYSQL
-$dsn = 'mysql:dbname=tourdefrance;host=localhost';
+$dsn='mysql:dbname=bddtickets;host=localhost';
 //login
-$login = 'root';
+$login='root';
 // Mot de passe
-$motDePasse = '';
+$motDePasse='';
 // Connexion au serveur MySQL
-try {
+try{
     $cnx = new PDO($dsn, $login, $motDePasse,
-        array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-} catch (PDOException $e) {
-    die('Erreur : ' . $e->getMessage());
 }
-
-
+catch (PDOException $e){
+	die('Erreur : ' . $e->getMessage());
+}
